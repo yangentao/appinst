@@ -77,7 +77,7 @@ afterEvaluate {
 
         repositories {
             maven {
-                name = "app800.cn"
+                name = "App800"
                 url = 'http://maven.app800.cn/repository/public/'
                 allowInsecureProtocol(true)
                 credentials {
@@ -86,7 +86,7 @@ afterEvaluate {
                 }
             }
             maven {
-                name = "sonatype.org"
+                name = "Sonatype"
                 url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
                 if (nameVersion.toLowerCase().contains("snap")) {
                     url = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
