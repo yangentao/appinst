@@ -7,7 +7,7 @@ plugins {
 
 
 String nameGroup = "dev.entao.app"
-String nameVersion = "0.3.1"
+String nameVersion = "0.5.1"
 String nameAF = "inst"
 String nameGithub = "appinst"
 String libDesc = 'Android global application instance'
@@ -21,6 +21,7 @@ dependencies {
 group nameGroup
 version nameVersion
 android {
+
     compileSdk 32
 
     defaultConfig {
