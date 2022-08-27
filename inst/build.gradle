@@ -7,10 +7,16 @@ plugins {
 
 
 String nameGroup = "dev.entao.app"
-String nameVersion = "0.3.0"
+String nameVersion = "0.3.1"
 String nameAF = "inst"
 String nameGithub = "appinst"
 String libDesc = 'Android global application instance'
+
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
+
 
 group nameGroup
 version nameVersion
@@ -45,9 +51,6 @@ android {
     }
 }
 
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-}
 
 
 task sourcesJar(type: Jar) {
