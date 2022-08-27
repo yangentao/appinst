@@ -7,11 +7,11 @@ plugins {
 
 
 String nameGroup = "dev.entao.app"
-String nameVersion = "0.5.1"
+String nameVersion = "0.6.0"
 String nameAF = "inst"
 String nameGithub = "appinst"
 String libDesc = 'Android global application instance'
-
+//检查AndroidManifest.xml中的package
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
@@ -21,7 +21,7 @@ dependencies {
 group nameGroup
 version nameVersion
 android {
-
+    namespace = "dev.entao.app.$nameAF"
     compileSdk 32
 
     defaultConfig {
