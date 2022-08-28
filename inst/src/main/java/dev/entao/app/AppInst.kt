@@ -10,16 +10,16 @@ object AppInst {
 
     //invoke this function before all
     fun setApplicationContext(context: Context) {
-        if (context is Application) {
-            _appContext = context
+        _appContext = if (context is Application) {
+            context
         } else {
-            _appContext = context.applicationContext
+            context.applicationContext
         }
     }
 
 
     val context: Context by lazy {
-        _appContext ?: throw  IllegalArgumentException("You should invoke setApplicationContext(context) first!")
+        _appContext ?: error("You should invoke setApplicationContext(context) first!")
     }
 
     val density: Float by lazy {
