@@ -12,6 +12,7 @@ val Int.resColor: Int get() = ResourcesCompat.getColor(AppInst.context.resources
 val Int.resDrawable: Drawable get() = ResourcesCompat.getDrawable(AppInst.context.resources, this, AppInst.context.theme) ?: error("NO image resource: $this ")
 val Int.resString: String get() = AppInst.context.resources.getString(this)
 val Int.resBitmap: Bitmap get() = BitmapFactory.decodeResource(AppInst.context.resources, this)
+val Int.resInteger: Int get() = AppInst.context.resources.getInteger(this)
 
 
 //dp => px
