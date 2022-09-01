@@ -13,6 +13,8 @@ val Int.resDrawable: Drawable get() = ResourcesCompat.getDrawable(AppInst.contex
 val Int.resString: String get() = AppInst.context.resources.getString(this)
 val Int.resBitmap: Bitmap get() = BitmapFactory.decodeResource(AppInst.context.resources, this)
 val Int.resInteger: Int get() = AppInst.context.resources.getInteger(this)
+val Int.resDimen: Int get() = AppInst.context.resources.getDimensionPixelSize(this)
+val Int.resDimenFloat: Float get() = AppInst.context.resources.getDimension(this)
 
 
 //dp => px
